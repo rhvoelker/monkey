@@ -33,6 +33,38 @@ func (l *Lexer) peekChar() byte {
 	return l.input[l.readPosition]
 }
 
+func (l *Lexer) readString() string {
+	position := l.position + 1
+	val := ""
+	for {
+		l.readChar()
+		if l.ch == '\\' {
+			val += l.input[position:l.position]
+			position = l.position + 2
+			switch l.peekChar() {
+			case '\\':
+				val += "\\"
+			case '"':
+				val += `"`
+			case 'n':
+				val += "\n"
+			case 'r':
+				val += "\r"
+			case 't':
+				val += "\t"
+			}
+			l.readChar()
+			if l.peekChar() != '\\' {
+				l.readChar()
+			}
+		}
+		if l.ch == '"' || l.ch == 0 {
+			break
+		}
+	}
+	return val + l.input[position:l.position]
+}
+
 func (l *Lexer) readIdentifier() string {
 	position := l.position
 	for isLetter(l.ch) {
@@ -61,6 +93,9 @@ func (l *Lexer) NextToken() token.Token {
 	l.skipWhitespace()
 
 	switch l.ch {
+	case '"':
+		tok.Type = token.STRING
+		tok.Literal = l.readString()
 	case '=':
 		if l.peekChar() == '=' {
 			ch := l.ch

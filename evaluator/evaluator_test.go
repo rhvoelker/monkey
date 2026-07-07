@@ -67,6 +67,52 @@ func TestEvalBoolean(t *testing.T) {
 	}
 }
 
+func TestStringLiteral(t *testing.T) {
+	input := `"hello world!"`
+
+	evaluated := testEval(input)
+	str, ok := evaluated.(*object.String)
+	if !ok {
+		t.Fatalf("object is not String. got=%T (%+v)", evaluated, evaluated)
+	}
+
+	if str.Value != "hello world!" {
+		t.Fatalf("String has wrong value. expected=%q, got=%q", "hello world!", str.Value)
+	}
+}
+
+func TestStringConcatenation(t *testing.T) {
+	input := `"Hello" + " " + "World!"`
+
+	evaluated := testEval(input)
+	str, ok := evaluated.(*object.String)
+	if !ok {
+		t.Fatalf("object is not String. got=%T (%+v)", evaluated, evaluated)
+	}
+
+	if str.Value != "Hello World!" {
+		t.Errorf("String has wrong value. expected=%q, got=%q", "Hello World!", str.Value)
+	}
+}
+
+func TestStringComparison(t *testing.T) {
+	tests := []struct {
+		input    string
+		expected bool
+	}{
+		{`"hello" < "world"`, true},
+		{`"hello" > "world"`, false},
+		{`"hello" == "hello"`, true},
+		{`"hello" == "world"`, false},
+		{`"hello" != "world"`, true},
+	}
+
+	for _, tt := range tests {
+		evaluated := testEval(tt.input)
+		testBooleanObject(t, evaluated, tt.expected)
+	}
+}
+
 func TestBangOperator(t *testing.T) {
 	tests := []struct {
 		input    string
@@ -165,6 +211,9 @@ if (10 > 1) {
 			"unknown operator: BOOLEAN + BOOLEAN",
 		},
 		{"foobar", "identifier not found: foobar"},
+		{`"Hello" - "World"`, "unknown operator: STRING - STRING"},
+		{`"Hello" * "World"`, "unknown operator: STRING * STRING"},
+		{`"Hello" / "World"`, "unknown operator: STRING / STRING"},
 	}
 
 	for _, tt := range tests {
