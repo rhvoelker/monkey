@@ -31,6 +31,7 @@ if (5 < 10) {
 "hello \"world\""
 "hello\n world"
 "hello\t\t\tworld"
+[1, 2];
 `
 
 	tests := []struct {
@@ -115,6 +116,12 @@ if (5 < 10) {
 		{token.STRING, "hello \"world\""},
 		{token.STRING, "hello\n world"},
 		{token.STRING, "hello\t\t\tworld"},
+		{token.LBRACKET, "["},
+		{token.INT, "1"},
+		{token.COMMA, ","},
+		{token.INT, "2"},
+		{token.RBRACKET, "]"},
+		{token.SEMICOLON, ";"},
 		{token.EOF, ""},
 	}
 
