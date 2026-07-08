@@ -7,6 +7,10 @@ import (
 	"strconv"
 )
 
+var (
+	NULL = &object.Null{}
+)
+
 type ProgramListener struct {
 	*parser.BaseMonkeyListener
 
@@ -35,4 +39,35 @@ func (l *ProgramListener) ExitIntegerLiteral(c *parser.IntegerLiteralContext) {
 		panic(fmt.Sprintf("Could not parse '%q' as integer. Check grammar.", c.GetText()))
 	}
 	l.Push(&object.Integer{Value: value})
+}
+
+func (l *ProgramListener) ExitUnaryOperatorExpression(c *parser.UnaryOperatorExpressionContext) {
+	operator := c.GetOp().GetText()
+	right := l.Pop()
+
+	switch operator {
+	case "!":
+		l.Push(evalBangOperatorExpression(right))
+	case "-":
+		l.Push(evalNegationOperatorExpression(right))
+	default:
+		l.Push(newError("unknown operator: %s%s", operator, right))
+	}
+}
+
+func evalBangOperatorExpression(right object.Object) object.Object {
+	return NULL
+}
+
+func evalNegationOperatorExpression(right object.Object) object.Object {
+	if right.Type() != object.INTEGER_OBJ {
+		return newError("unknown operator: -%s", right.Type())
+	}
+
+	value := right.(*object.Integer).Value
+	return &object.Integer{Value: -value}
+}
+
+func newError(format string, a ...interface{}) *object.Error {
+	return &object.Error{Message: fmt.Sprintf(format, a...)}
 }

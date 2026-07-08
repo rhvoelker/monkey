@@ -13,7 +13,7 @@ expr : INT                                                                   # I
      | (TRUE | FALSE)                                                        # BooleanLiteral
      | STRING                                                                # StringLiteral
      | IDENT                                                                 # IdentifierExpression
-     | (MINUS | BANG) expr                                                   # UnaryOperatorExpression
+     | op=(MINUS | BANG) expr                                                # UnaryOperatorExpression
      | expr LBRACKET expr RBRACKET                                           # IndexOperatorExpression
      | expr LPAREN expr_list RPAREN                                          # CallExpression
      | expr (ASTERISK | SLASH) expr                                          # MulDivBinaryExpression

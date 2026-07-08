@@ -864,6 +864,7 @@ func (s *IfExpressionContext) Accept(visitor antlr.ParseTreeVisitor) interface{}
 
 type UnaryOperatorExpressionContext struct {
 	ExprContext
+	op antlr.Token
 }
 
 func NewUnaryOperatorExpressionContext(parser antlr.Parser, ctx antlr.ParserRuleContext) *UnaryOperatorExpressionContext {
@@ -875,6 +876,10 @@ func NewUnaryOperatorExpressionContext(parser antlr.Parser, ctx antlr.ParserRule
 
 	return p
 }
+
+func (s *UnaryOperatorExpressionContext) GetOp() antlr.Token { return s.op }
+
+func (s *UnaryOperatorExpressionContext) SetOp(v antlr.Token) { s.op = v }
 
 func (s *UnaryOperatorExpressionContext) GetRuleContext() antlr.RuleContext {
 	return s
@@ -1899,10 +1904,17 @@ func (p *MonkeyParser) expr(_p int) (localctx IExprContext) {
 		_prevctx = localctx
 		{
 			p.SetState(37)
+
+			var _lt = p.GetTokenStream().LT(1)
+
+			localctx.(*UnaryOperatorExpressionContext).op = _lt
+
 			_la = p.GetTokenStream().LA(1)
 
 			if !(_la == MonkeyParserMINUS || _la == MonkeyParserBANG) {
-				p.GetErrorHandler().RecoverInline(p)
+				var _ri = p.GetErrorHandler().RecoverInline(p)
+
+				localctx.(*UnaryOperatorExpressionContext).op = _ri
 			} else {
 				p.GetErrorHandler().ReportMatch(p)
 				p.Consume()
