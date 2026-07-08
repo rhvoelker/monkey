@@ -8,7 +8,9 @@ import (
 )
 
 var (
-	NULL = &object.Null{}
+	NULL  = &object.Null{}
+	TRUE  = &object.Boolean{Value: true}
+	FALSE = &object.Boolean{Value: false}
 )
 
 type ProgramListener struct {
@@ -39,6 +41,14 @@ func (l *ProgramListener) ExitIntegerLiteral(c *parser.IntegerLiteralContext) {
 		panic(fmt.Sprintf("Could not parse '%q' as integer. Check grammar.", c.GetText()))
 	}
 	l.Push(&object.Integer{Value: value})
+}
+
+func (l *ProgramListener) ExitBooleanLiteral(c *parser.BooleanLiteralContext) {
+	value, err := strconv.ParseBool(c.GetText())
+	if err != nil {
+		panic(fmt.Sprintf("Could not parse '%q' as boolean. Check grammar.", c.GetText()))
+	}
+	l.Push(nativeBoolToBoolean(value))
 }
 
 func (l *ProgramListener) ExitUnaryOperatorExpression(c *parser.UnaryOperatorExpressionContext) {
@@ -105,6 +115,14 @@ func evalNegationOperatorExpression(right object.Object) object.Object {
 
 	value := right.(*object.Integer).Value
 	return &object.Integer{Value: -value}
+}
+
+func nativeBoolToBoolean(b bool) object.Object {
+	if b {
+		return TRUE
+	}
+
+	return FALSE
 }
 
 func newError(format string, a ...interface{}) *object.Error {

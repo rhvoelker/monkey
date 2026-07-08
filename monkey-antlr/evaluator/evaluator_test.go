@@ -35,6 +35,38 @@ func Test_Eval_Integers(t *testing.T) {
 	}
 }
 
+func Test_Eval_Booleans(t *testing.T) {
+	tests := []struct {
+		input    string
+		expected bool
+	}{
+		{"true", true},
+		{"false", false},
+		//{"1 < 2", true},
+		//{"1 > 2", false},
+		//{"1 < 1", false},
+		//{"1 > 1", false},
+		//{"1 == 1", true},
+		//{"1 != 1", false},
+		//{"1 == 2", false},
+		//{"1 != 2", true},
+		//{"true == true", true},
+		//{"false == false", true},
+		//{"true == false", false},
+		//{"true != false", true},
+		//{"false != true", true},
+		//{"(1 < 2) == true", true},
+		//{"(1 < 2) == false", false},
+		//{"(1 > 2) == true", false},
+		//{"(1 > 2) == false", true},
+	}
+
+	for _, tt := range tests {
+		evaluated := testEval(tt.input)
+		testBooleanObject(t, evaluated, tt.expected)
+	}
+}
+
 func testEval(input string) object.Object {
 	eval := New(input, object.NewEnvironment())
 	return eval.Eval()
@@ -43,5 +75,11 @@ func testEval(input string) object.Object {
 func testIntegerObject(t *testing.T, obj object.Object, expected int64) {
 	assert.IsType(t, &object.Integer{}, obj)
 	result := obj.(*object.Integer).Value
+	assert.Equal(t, expected, result)
+}
+
+func testBooleanObject(t *testing.T, obj object.Object, expected bool) {
+	assert.IsType(t, &object.Boolean{}, obj)
+	result := obj.(*object.Boolean).Value
 	assert.Equal(t, expected, result)
 }
