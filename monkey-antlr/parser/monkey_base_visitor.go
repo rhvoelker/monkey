@@ -35,6 +35,10 @@ func (v *BaseMonkeyVisitor) VisitBooleanLiteral(ctx *BooleanLiteralContext) inte
 	return v.VisitChildren(ctx)
 }
 
+func (v *BaseMonkeyVisitor) VisitGroupedExpression(ctx *GroupedExpressionContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
 func (v *BaseMonkeyVisitor) VisitEqualityBinaryExpression(ctx *EqualityBinaryExpressionContext) interface{} {
 	return v.VisitChildren(ctx)
 }

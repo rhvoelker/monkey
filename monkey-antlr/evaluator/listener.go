@@ -55,6 +55,45 @@ func (l *ProgramListener) ExitUnaryOperatorExpression(c *parser.UnaryOperatorExp
 	}
 }
 
+func (l *ProgramListener) ExitMulDivBinaryExpression(c *parser.MulDivBinaryExpressionContext) {
+	operator := c.GetOp().GetText()
+	right, left := l.Pop(), l.Pop()
+	l.Push(evalBinaryOperatorExpression(left, operator, right))
+}
+
+func (l *ProgramListener) ExitAddSubBinaryExpression(c *parser.AddSubBinaryExpressionContext) {
+	operator := c.GetOp().GetText()
+	right, left := l.Pop(), l.Pop()
+	l.Push(evalBinaryOperatorExpression(left, operator, right))
+}
+
+func evalBinaryOperatorExpression(left object.Object, operator string, right object.Object) object.Object {
+	switch {
+	case left.Type() == object.INTEGER_OBJ && right.Type() == object.INTEGER_OBJ:
+		return evalIntegerBinaryOperatorExpression(left, operator, right)
+	default:
+		return newError("unknown operator: %s %s %s", left.Type(), operator, right.Type())
+	}
+}
+
+func evalIntegerBinaryOperatorExpression(left object.Object, operator string, right object.Object) object.Object {
+	leftValue := left.(*object.Integer).Value
+	rightValue := right.(*object.Integer).Value
+
+	switch operator {
+	case "+":
+		return &object.Integer{Value: leftValue + rightValue}
+	case "-":
+		return &object.Integer{Value: leftValue - rightValue}
+	case "*":
+		return &object.Integer{Value: leftValue * rightValue}
+	case "/":
+		return &object.Integer{Value: leftValue / rightValue}
+	default:
+		return newError("unknown operator: %s %s %s", left.Type(), operator, right.Type())
+	}
+}
+
 func evalBangOperatorExpression(right object.Object) object.Object {
 	return NULL
 }

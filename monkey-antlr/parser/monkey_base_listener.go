@@ -62,6 +62,12 @@ func (s *BaseMonkeyListener) EnterBooleanLiteral(ctx *BooleanLiteralContext) {}
 // ExitBooleanLiteral is called when production BooleanLiteral is exited.
 func (s *BaseMonkeyListener) ExitBooleanLiteral(ctx *BooleanLiteralContext) {}
 
+// EnterGroupedExpression is called when production GroupedExpression is entered.
+func (s *BaseMonkeyListener) EnterGroupedExpression(ctx *GroupedExpressionContext) {}
+
+// ExitGroupedExpression is called when production GroupedExpression is exited.
+func (s *BaseMonkeyListener) ExitGroupedExpression(ctx *GroupedExpressionContext) {}
+
 // EnterEqualityBinaryExpression is called when production EqualityBinaryExpression is entered.
 func (s *BaseMonkeyListener) EnterEqualityBinaryExpression(ctx *EqualityBinaryExpressionContext) {}
 

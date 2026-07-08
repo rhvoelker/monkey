@@ -13,13 +13,14 @@ expr : INT                                                                   # I
      | (TRUE | FALSE)                                                        # BooleanLiteral
      | STRING                                                                # StringLiteral
      | IDENT                                                                 # IdentifierExpression
+     | LPAREN expr RPAREN                                                    # GroupedExpression
      | op=(MINUS | BANG) expr                                                # UnaryOperatorExpression
      | expr LBRACKET expr RBRACKET                                           # IndexOperatorExpression
      | expr LPAREN expr_list RPAREN                                          # CallExpression
-     | expr (ASTERISK | SLASH) expr                                          # MulDivBinaryExpression
-     | expr (PLUS | MINUS) expr                                              # AddSubBinaryExpression
-     | expr (LT | GT) expr                                                   # LesGreBinaryExpression
-     | expr (EQ | NOT_EQ) expr                                               # EqualityBinaryExpression
+     | expr op=(ASTERISK | SLASH) expr                                       # MulDivBinaryExpression
+     | expr op=(PLUS | MINUS) expr                                           # AddSubBinaryExpression
+     | expr op=(LT | GT) expr                                                # LesGreBinaryExpression
+     | expr op=(EQ | NOT_EQ) expr                                            # EqualityBinaryExpression
      | LBRACKET expr_list RBRACKET                                           # ArrayExpression
      | IF LPAREN expr RPAREN LBRACE stmt* RBRACE (ELSE LBRACE stmt* RBRACE)? # IfExpression
      | FUNCTION LPAREN args_list RPAREN LBRACE stmt* RBRACE                  # FunctionExpression

@@ -28,6 +28,9 @@ type MonkeyListener interface {
 	// EnterBooleanLiteral is called when entering the BooleanLiteral production.
 	EnterBooleanLiteral(c *BooleanLiteralContext)
 
+	// EnterGroupedExpression is called when entering the GroupedExpression production.
+	EnterGroupedExpression(c *GroupedExpressionContext)
+
 	// EnterEqualityBinaryExpression is called when entering the EqualityBinaryExpression production.
 	EnterEqualityBinaryExpression(c *EqualityBinaryExpressionContext)
 
@@ -96,6 +99,9 @@ type MonkeyListener interface {
 
 	// ExitBooleanLiteral is called when exiting the BooleanLiteral production.
 	ExitBooleanLiteral(c *BooleanLiteralContext)
+
+	// ExitGroupedExpression is called when exiting the GroupedExpression production.
+	ExitGroupedExpression(c *GroupedExpressionContext)
 
 	// ExitEqualityBinaryExpression is called when exiting the EqualityBinaryExpression production.
 	ExitEqualityBinaryExpression(c *EqualityBinaryExpressionContext)

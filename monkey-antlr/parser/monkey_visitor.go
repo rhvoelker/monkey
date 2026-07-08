@@ -28,6 +28,9 @@ type MonkeyVisitor interface {
 	// Visit a parse tree produced by MonkeyParser#BooleanLiteral.
 	VisitBooleanLiteral(ctx *BooleanLiteralContext) interface{}
 
+	// Visit a parse tree produced by MonkeyParser#GroupedExpression.
+	VisitGroupedExpression(ctx *GroupedExpressionContext) interface{}
+
 	// Visit a parse tree produced by MonkeyParser#EqualityBinaryExpression.
 	VisitEqualityBinaryExpression(ctx *EqualityBinaryExpressionContext) interface{}
 

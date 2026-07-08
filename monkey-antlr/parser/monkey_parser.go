@@ -49,69 +49,71 @@ func monkeyParserInit() {
 	}
 	staticData.PredictionContextCache = antlr.NewPredictionContextCache()
 	staticData.serializedATN = []int32{
-		4, 1, 30, 144, 2, 0, 7, 0, 2, 1, 7, 1, 2, 2, 7, 2, 2, 3, 7, 3, 2, 4, 7,
+		4, 1, 30, 148, 2, 0, 7, 0, 2, 1, 7, 1, 2, 2, 7, 2, 2, 3, 7, 3, 2, 4, 7,
 		4, 2, 5, 7, 5, 2, 6, 7, 6, 2, 7, 7, 7, 1, 0, 5, 0, 18, 8, 0, 10, 0, 12,
 		0, 21, 9, 0, 1, 0, 3, 0, 24, 8, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 3, 1,
 		31, 8, 1, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1,
-		2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 5, 2, 50, 8, 2, 10, 2, 12, 2, 53,
-		9, 2, 1, 2, 1, 2, 1, 2, 1, 2, 5, 2, 59, 8, 2, 10, 2, 12, 2, 62, 9, 2, 1,
-		2, 3, 2, 65, 8, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 5, 2, 73, 8, 2,
-		10, 2, 12, 2, 76, 9, 2, 1, 2, 1, 2, 3, 2, 80, 8, 2, 1, 2, 1, 2, 1, 2, 1,
+		2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 5, 2, 54,
+		8, 2, 10, 2, 12, 2, 57, 9, 2, 1, 2, 1, 2, 1, 2, 1, 2, 5, 2, 63, 8, 2, 10,
+		2, 12, 2, 66, 9, 2, 1, 2, 3, 2, 69, 8, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2,
+		1, 2, 5, 2, 77, 8, 2, 10, 2, 12, 2, 80, 9, 2, 1, 2, 1, 2, 3, 2, 84, 8,
 		2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1,
-		2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 5, 2, 104, 8, 2, 10, 2, 12, 2, 107,
-		9, 2, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 4, 1, 4, 1, 4, 1, 4, 1, 5,
-		1, 5, 1, 5, 1, 6, 1, 6, 1, 6, 1, 6, 5, 6, 126, 8, 6, 10, 6, 12, 6, 129,
-		9, 6, 3, 6, 131, 8, 6, 1, 7, 1, 7, 1, 7, 1, 7, 5, 7, 137, 8, 7, 10, 7,
-		12, 7, 140, 9, 7, 3, 7, 142, 8, 7, 1, 7, 0, 1, 4, 8, 0, 2, 4, 6, 8, 10,
-		12, 14, 0, 6, 1, 0, 3, 4, 1, 0, 13, 14, 1, 0, 15, 16, 1, 0, 12, 13, 1,
-		0, 17, 18, 1, 0, 19, 20, 160, 0, 19, 1, 0, 0, 0, 2, 30, 1, 0, 0, 0, 4,
-		79, 1, 0, 0, 0, 6, 108, 1, 0, 0, 0, 8, 114, 1, 0, 0, 0, 10, 118, 1, 0,
-		0, 0, 12, 130, 1, 0, 0, 0, 14, 141, 1, 0, 0, 0, 16, 18, 3, 2, 1, 0, 17,
-		16, 1, 0, 0, 0, 18, 21, 1, 0, 0, 0, 19, 17, 1, 0, 0, 0, 19, 20, 1, 0, 0,
-		0, 20, 23, 1, 0, 0, 0, 21, 19, 1, 0, 0, 0, 22, 24, 3, 4, 2, 0, 23, 22,
-		1, 0, 0, 0, 23, 24, 1, 0, 0, 0, 24, 25, 1, 0, 0, 0, 25, 26, 5, 0, 0, 1,
-		26, 1, 1, 0, 0, 0, 27, 31, 3, 6, 3, 0, 28, 31, 3, 8, 4, 0, 29, 31, 3, 10,
-		5, 0, 30, 27, 1, 0, 0, 0, 30, 28, 1, 0, 0, 0, 30, 29, 1, 0, 0, 0, 31, 3,
-		1, 0, 0, 0, 32, 33, 6, 2, -1, 0, 33, 80, 5, 10, 0, 0, 34, 80, 7, 0, 0,
-		0, 35, 80, 5, 8, 0, 0, 36, 80, 5, 9, 0, 0, 37, 38, 7, 1, 0, 0, 38, 80,
-		3, 4, 2, 10, 39, 40, 5, 28, 0, 0, 40, 41, 3, 12, 6, 0, 41, 42, 5, 29, 0,
-		0, 42, 80, 1, 0, 0, 0, 43, 44, 5, 5, 0, 0, 44, 45, 5, 24, 0, 0, 45, 46,
-		3, 4, 2, 0, 46, 47, 5, 25, 0, 0, 47, 51, 5, 26, 0, 0, 48, 50, 3, 2, 1,
-		0, 49, 48, 1, 0, 0, 0, 50, 53, 1, 0, 0, 0, 51, 49, 1, 0, 0, 0, 51, 52,
-		1, 0, 0, 0, 52, 54, 1, 0, 0, 0, 53, 51, 1, 0, 0, 0, 54, 64, 5, 27, 0, 0,
-		55, 56, 5, 6, 0, 0, 56, 60, 5, 26, 0, 0, 57, 59, 3, 2, 1, 0, 58, 57, 1,
-		0, 0, 0, 59, 62, 1, 0, 0, 0, 60, 58, 1, 0, 0, 0, 60, 61, 1, 0, 0, 0, 61,
-		63, 1, 0, 0, 0, 62, 60, 1, 0, 0, 0, 63, 65, 5, 27, 0, 0, 64, 55, 1, 0,
-		0, 0, 64, 65, 1, 0, 0, 0, 65, 80, 1, 0, 0, 0, 66, 67, 5, 1, 0, 0, 67, 68,
-		5, 24, 0, 0, 68, 69, 3, 14, 7, 0, 69, 70, 5, 25, 0, 0, 70, 74, 5, 26, 0,
-		0, 71, 73, 3, 2, 1, 0, 72, 71, 1, 0, 0, 0, 73, 76, 1, 0, 0, 0, 74, 72,
-		1, 0, 0, 0, 74, 75, 1, 0, 0, 0, 75, 77, 1, 0, 0, 0, 76, 74, 1, 0, 0, 0,
-		77, 78, 5, 27, 0, 0, 78, 80, 1, 0, 0, 0, 79, 32, 1, 0, 0, 0, 79, 34, 1,
-		0, 0, 0, 79, 35, 1, 0, 0, 0, 79, 36, 1, 0, 0, 0, 79, 37, 1, 0, 0, 0, 79,
-		39, 1, 0, 0, 0, 79, 43, 1, 0, 0, 0, 79, 66, 1, 0, 0, 0, 80, 105, 1, 0,
-		0, 0, 81, 82, 10, 7, 0, 0, 82, 83, 7, 2, 0, 0, 83, 104, 3, 4, 2, 8, 84,
-		85, 10, 6, 0, 0, 85, 86, 7, 3, 0, 0, 86, 104, 3, 4, 2, 7, 87, 88, 10, 5,
-		0, 0, 88, 89, 7, 4, 0, 0, 89, 104, 3, 4, 2, 6, 90, 91, 10, 4, 0, 0, 91,
-		92, 7, 5, 0, 0, 92, 104, 3, 4, 2, 5, 93, 94, 10, 9, 0, 0, 94, 95, 5, 28,
-		0, 0, 95, 96, 3, 4, 2, 0, 96, 97, 5, 29, 0, 0, 97, 104, 1, 0, 0, 0, 98,
-		99, 10, 8, 0, 0, 99, 100, 5, 24, 0, 0, 100, 101, 3, 12, 6, 0, 101, 102,
-		5, 25, 0, 0, 102, 104, 1, 0, 0, 0, 103, 81, 1, 0, 0, 0, 103, 84, 1, 0,
-		0, 0, 103, 87, 1, 0, 0, 0, 103, 90, 1, 0, 0, 0, 103, 93, 1, 0, 0, 0, 103,
-		98, 1, 0, 0, 0, 104, 107, 1, 0, 0, 0, 105, 103, 1, 0, 0, 0, 105, 106, 1,
-		0, 0, 0, 106, 5, 1, 0, 0, 0, 107, 105, 1, 0, 0, 0, 108, 109, 5, 2, 0, 0,
-		109, 110, 5, 9, 0, 0, 110, 111, 5, 11, 0, 0, 111, 112, 3, 4, 2, 0, 112,
-		113, 5, 23, 0, 0, 113, 7, 1, 0, 0, 0, 114, 115, 5, 7, 0, 0, 115, 116, 3,
-		4, 2, 0, 116, 117, 5, 23, 0, 0, 117, 9, 1, 0, 0, 0, 118, 119, 3, 4, 2,
-		0, 119, 120, 5, 23, 0, 0, 120, 11, 1, 0, 0, 0, 121, 131, 1, 0, 0, 0, 122,
-		127, 3, 4, 2, 0, 123, 124, 5, 21, 0, 0, 124, 126, 3, 4, 2, 0, 125, 123,
-		1, 0, 0, 0, 126, 129, 1, 0, 0, 0, 127, 125, 1, 0, 0, 0, 127, 128, 1, 0,
-		0, 0, 128, 131, 1, 0, 0, 0, 129, 127, 1, 0, 0, 0, 130, 121, 1, 0, 0, 0,
-		130, 122, 1, 0, 0, 0, 131, 13, 1, 0, 0, 0, 132, 142, 1, 0, 0, 0, 133, 138,
-		5, 9, 0, 0, 134, 135, 5, 21, 0, 0, 135, 137, 5, 9, 0, 0, 136, 134, 1, 0,
-		0, 0, 137, 140, 1, 0, 0, 0, 138, 136, 1, 0, 0, 0, 138, 139, 1, 0, 0, 0,
-		139, 142, 1, 0, 0, 0, 140, 138, 1, 0, 0, 0, 141, 132, 1, 0, 0, 0, 141,
-		133, 1, 0, 0, 0, 142, 15, 1, 0, 0, 0, 14, 19, 23, 30, 51, 60, 64, 74, 79,
-		103, 105, 127, 130, 138, 141,
+		2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 5, 2, 108,
+		8, 2, 10, 2, 12, 2, 111, 9, 2, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 4,
+		1, 4, 1, 4, 1, 4, 1, 5, 1, 5, 1, 5, 1, 6, 1, 6, 1, 6, 1, 6, 5, 6, 130,
+		8, 6, 10, 6, 12, 6, 133, 9, 6, 3, 6, 135, 8, 6, 1, 7, 1, 7, 1, 7, 1, 7,
+		5, 7, 141, 8, 7, 10, 7, 12, 7, 144, 9, 7, 3, 7, 146, 8, 7, 1, 7, 0, 1,
+		4, 8, 0, 2, 4, 6, 8, 10, 12, 14, 0, 6, 1, 0, 3, 4, 1, 0, 13, 14, 1, 0,
+		15, 16, 1, 0, 12, 13, 1, 0, 17, 18, 1, 0, 19, 20, 165, 0, 19, 1, 0, 0,
+		0, 2, 30, 1, 0, 0, 0, 4, 83, 1, 0, 0, 0, 6, 112, 1, 0, 0, 0, 8, 118, 1,
+		0, 0, 0, 10, 122, 1, 0, 0, 0, 12, 134, 1, 0, 0, 0, 14, 145, 1, 0, 0, 0,
+		16, 18, 3, 2, 1, 0, 17, 16, 1, 0, 0, 0, 18, 21, 1, 0, 0, 0, 19, 17, 1,
+		0, 0, 0, 19, 20, 1, 0, 0, 0, 20, 23, 1, 0, 0, 0, 21, 19, 1, 0, 0, 0, 22,
+		24, 3, 4, 2, 0, 23, 22, 1, 0, 0, 0, 23, 24, 1, 0, 0, 0, 24, 25, 1, 0, 0,
+		0, 25, 26, 5, 0, 0, 1, 26, 1, 1, 0, 0, 0, 27, 31, 3, 6, 3, 0, 28, 31, 3,
+		8, 4, 0, 29, 31, 3, 10, 5, 0, 30, 27, 1, 0, 0, 0, 30, 28, 1, 0, 0, 0, 30,
+		29, 1, 0, 0, 0, 31, 3, 1, 0, 0, 0, 32, 33, 6, 2, -1, 0, 33, 84, 5, 10,
+		0, 0, 34, 84, 7, 0, 0, 0, 35, 84, 5, 8, 0, 0, 36, 84, 5, 9, 0, 0, 37, 38,
+		5, 24, 0, 0, 38, 39, 3, 4, 2, 0, 39, 40, 5, 25, 0, 0, 40, 84, 1, 0, 0,
+		0, 41, 42, 7, 1, 0, 0, 42, 84, 3, 4, 2, 10, 43, 44, 5, 28, 0, 0, 44, 45,
+		3, 12, 6, 0, 45, 46, 5, 29, 0, 0, 46, 84, 1, 0, 0, 0, 47, 48, 5, 5, 0,
+		0, 48, 49, 5, 24, 0, 0, 49, 50, 3, 4, 2, 0, 50, 51, 5, 25, 0, 0, 51, 55,
+		5, 26, 0, 0, 52, 54, 3, 2, 1, 0, 53, 52, 1, 0, 0, 0, 54, 57, 1, 0, 0, 0,
+		55, 53, 1, 0, 0, 0, 55, 56, 1, 0, 0, 0, 56, 58, 1, 0, 0, 0, 57, 55, 1,
+		0, 0, 0, 58, 68, 5, 27, 0, 0, 59, 60, 5, 6, 0, 0, 60, 64, 5, 26, 0, 0,
+		61, 63, 3, 2, 1, 0, 62, 61, 1, 0, 0, 0, 63, 66, 1, 0, 0, 0, 64, 62, 1,
+		0, 0, 0, 64, 65, 1, 0, 0, 0, 65, 67, 1, 0, 0, 0, 66, 64, 1, 0, 0, 0, 67,
+		69, 5, 27, 0, 0, 68, 59, 1, 0, 0, 0, 68, 69, 1, 0, 0, 0, 69, 84, 1, 0,
+		0, 0, 70, 71, 5, 1, 0, 0, 71, 72, 5, 24, 0, 0, 72, 73, 3, 14, 7, 0, 73,
+		74, 5, 25, 0, 0, 74, 78, 5, 26, 0, 0, 75, 77, 3, 2, 1, 0, 76, 75, 1, 0,
+		0, 0, 77, 80, 1, 0, 0, 0, 78, 76, 1, 0, 0, 0, 78, 79, 1, 0, 0, 0, 79, 81,
+		1, 0, 0, 0, 80, 78, 1, 0, 0, 0, 81, 82, 5, 27, 0, 0, 82, 84, 1, 0, 0, 0,
+		83, 32, 1, 0, 0, 0, 83, 34, 1, 0, 0, 0, 83, 35, 1, 0, 0, 0, 83, 36, 1,
+		0, 0, 0, 83, 37, 1, 0, 0, 0, 83, 41, 1, 0, 0, 0, 83, 43, 1, 0, 0, 0, 83,
+		47, 1, 0, 0, 0, 83, 70, 1, 0, 0, 0, 84, 109, 1, 0, 0, 0, 85, 86, 10, 7,
+		0, 0, 86, 87, 7, 2, 0, 0, 87, 108, 3, 4, 2, 8, 88, 89, 10, 6, 0, 0, 89,
+		90, 7, 3, 0, 0, 90, 108, 3, 4, 2, 7, 91, 92, 10, 5, 0, 0, 92, 93, 7, 4,
+		0, 0, 93, 108, 3, 4, 2, 6, 94, 95, 10, 4, 0, 0, 95, 96, 7, 5, 0, 0, 96,
+		108, 3, 4, 2, 5, 97, 98, 10, 9, 0, 0, 98, 99, 5, 28, 0, 0, 99, 100, 3,
+		4, 2, 0, 100, 101, 5, 29, 0, 0, 101, 108, 1, 0, 0, 0, 102, 103, 10, 8,
+		0, 0, 103, 104, 5, 24, 0, 0, 104, 105, 3, 12, 6, 0, 105, 106, 5, 25, 0,
+		0, 106, 108, 1, 0, 0, 0, 107, 85, 1, 0, 0, 0, 107, 88, 1, 0, 0, 0, 107,
+		91, 1, 0, 0, 0, 107, 94, 1, 0, 0, 0, 107, 97, 1, 0, 0, 0, 107, 102, 1,
+		0, 0, 0, 108, 111, 1, 0, 0, 0, 109, 107, 1, 0, 0, 0, 109, 110, 1, 0, 0,
+		0, 110, 5, 1, 0, 0, 0, 111, 109, 1, 0, 0, 0, 112, 113, 5, 2, 0, 0, 113,
+		114, 5, 9, 0, 0, 114, 115, 5, 11, 0, 0, 115, 116, 3, 4, 2, 0, 116, 117,
+		5, 23, 0, 0, 117, 7, 1, 0, 0, 0, 118, 119, 5, 7, 0, 0, 119, 120, 3, 4,
+		2, 0, 120, 121, 5, 23, 0, 0, 121, 9, 1, 0, 0, 0, 122, 123, 3, 4, 2, 0,
+		123, 124, 5, 23, 0, 0, 124, 11, 1, 0, 0, 0, 125, 135, 1, 0, 0, 0, 126,
+		131, 3, 4, 2, 0, 127, 128, 5, 21, 0, 0, 128, 130, 3, 4, 2, 0, 129, 127,
+		1, 0, 0, 0, 130, 133, 1, 0, 0, 0, 131, 129, 1, 0, 0, 0, 131, 132, 1, 0,
+		0, 0, 132, 135, 1, 0, 0, 0, 133, 131, 1, 0, 0, 0, 134, 125, 1, 0, 0, 0,
+		134, 126, 1, 0, 0, 0, 135, 13, 1, 0, 0, 0, 136, 146, 1, 0, 0, 0, 137, 142,
+		5, 9, 0, 0, 138, 139, 5, 21, 0, 0, 139, 141, 5, 9, 0, 0, 140, 138, 1, 0,
+		0, 0, 141, 144, 1, 0, 0, 0, 142, 140, 1, 0, 0, 0, 142, 143, 1, 0, 0, 0,
+		143, 146, 1, 0, 0, 0, 144, 142, 1, 0, 0, 0, 145, 136, 1, 0, 0, 0, 145,
+		137, 1, 0, 0, 0, 146, 15, 1, 0, 0, 0, 14, 19, 23, 30, 55, 64, 68, 78, 83,
+		107, 109, 131, 134, 142, 145,
 	}
 	deserializer := antlr.NewATNDeserializer(nil)
 	staticData.atn = deserializer.Deserialize(staticData.serializedATN)
@@ -376,7 +378,7 @@ func (p *MonkeyParser) Prog() (localctx IProgContext) {
 	}
 	_la = p.GetTokenStream().LA(1)
 
-	if (int64(_la) & ^0x3f) == 0 && ((int64(1)<<_la)&268461882) != 0 {
+	if (int64(_la) & ^0x3f) == 0 && ((int64(1)<<_la)&285239098) != 0 {
 		{
 			p.SetState(22)
 			p.expr(0)
@@ -653,7 +655,7 @@ func (p *MonkeyParser) Stmt() (localctx IStmtContext) {
 			p.Return_stmt()
 		}
 
-	case MonkeyParserFUNCTION, MonkeyParserTRUE, MonkeyParserFALSE, MonkeyParserIF, MonkeyParserSTRING, MonkeyParserIDENT, MonkeyParserINT, MonkeyParserMINUS, MonkeyParserBANG, MonkeyParserLBRACKET:
+	case MonkeyParserFUNCTION, MonkeyParserTRUE, MonkeyParserFALSE, MonkeyParserIF, MonkeyParserSTRING, MonkeyParserIDENT, MonkeyParserINT, MonkeyParserMINUS, MonkeyParserBANG, MonkeyParserLPAREN, MonkeyParserLBRACKET:
 		localctx = NewExpressionStatementContext(p, localctx)
 		p.EnterOuterAlt(localctx, 3)
 		{
@@ -979,8 +981,73 @@ func (s *BooleanLiteralContext) Accept(visitor antlr.ParseTreeVisitor) interface
 	}
 }
 
+type GroupedExpressionContext struct {
+	ExprContext
+}
+
+func NewGroupedExpressionContext(parser antlr.Parser, ctx antlr.ParserRuleContext) *GroupedExpressionContext {
+	var p = new(GroupedExpressionContext)
+
+	InitEmptyExprContext(&p.ExprContext)
+	p.parser = parser
+	p.CopyAll(ctx.(*ExprContext))
+
+	return p
+}
+
+func (s *GroupedExpressionContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *GroupedExpressionContext) LPAREN() antlr.TerminalNode {
+	return s.GetToken(MonkeyParserLPAREN, 0)
+}
+
+func (s *GroupedExpressionContext) Expr() IExprContext {
+	var t antlr.RuleContext
+	for _, ctx := range s.GetChildren() {
+		if _, ok := ctx.(IExprContext); ok {
+			t = ctx.(antlr.RuleContext)
+			break
+		}
+	}
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(IExprContext)
+}
+
+func (s *GroupedExpressionContext) RPAREN() antlr.TerminalNode {
+	return s.GetToken(MonkeyParserRPAREN, 0)
+}
+
+func (s *GroupedExpressionContext) EnterRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MonkeyListener); ok {
+		listenerT.EnterGroupedExpression(s)
+	}
+}
+
+func (s *GroupedExpressionContext) ExitRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MonkeyListener); ok {
+		listenerT.ExitGroupedExpression(s)
+	}
+}
+
+func (s *GroupedExpressionContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MonkeyVisitor:
+		return t.VisitGroupedExpression(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
 type EqualityBinaryExpressionContext struct {
 	ExprContext
+	op antlr.Token
 }
 
 func NewEqualityBinaryExpressionContext(parser antlr.Parser, ctx antlr.ParserRuleContext) *EqualityBinaryExpressionContext {
@@ -992,6 +1059,10 @@ func NewEqualityBinaryExpressionContext(parser antlr.Parser, ctx antlr.ParserRul
 
 	return p
 }
+
+func (s *EqualityBinaryExpressionContext) GetOp() antlr.Token { return s.op }
+
+func (s *EqualityBinaryExpressionContext) SetOp(v antlr.Token) { s.op = v }
 
 func (s *EqualityBinaryExpressionContext) GetRuleContext() antlr.RuleContext {
 	return s
@@ -1114,6 +1185,7 @@ func (s *IdentifierExpressionContext) Accept(visitor antlr.ParseTreeVisitor) int
 
 type LesGreBinaryExpressionContext struct {
 	ExprContext
+	op antlr.Token
 }
 
 func NewLesGreBinaryExpressionContext(parser antlr.Parser, ctx antlr.ParserRuleContext) *LesGreBinaryExpressionContext {
@@ -1125,6 +1197,10 @@ func NewLesGreBinaryExpressionContext(parser antlr.Parser, ctx antlr.ParserRuleC
 
 	return p
 }
+
+func (s *LesGreBinaryExpressionContext) GetOp() antlr.Token { return s.op }
+
+func (s *LesGreBinaryExpressionContext) SetOp(v antlr.Token) { s.op = v }
 
 func (s *LesGreBinaryExpressionContext) GetRuleContext() antlr.RuleContext {
 	return s
@@ -1292,6 +1368,7 @@ func (s *IndexOperatorExpressionContext) Accept(visitor antlr.ParseTreeVisitor) 
 
 type AddSubBinaryExpressionContext struct {
 	ExprContext
+	op antlr.Token
 }
 
 func NewAddSubBinaryExpressionContext(parser antlr.Parser, ctx antlr.ParserRuleContext) *AddSubBinaryExpressionContext {
@@ -1303,6 +1380,10 @@ func NewAddSubBinaryExpressionContext(parser antlr.Parser, ctx antlr.ParserRuleC
 
 	return p
 }
+
+func (s *AddSubBinaryExpressionContext) GetOp() antlr.Token { return s.op }
+
+func (s *AddSubBinaryExpressionContext) SetOp(v antlr.Token) { s.op = v }
 
 func (s *AddSubBinaryExpressionContext) GetRuleContext() antlr.RuleContext {
 	return s
@@ -1730,6 +1811,7 @@ func (s *IntegerLiteralContext) Accept(visitor antlr.ParseTreeVisitor) interface
 
 type MulDivBinaryExpressionContext struct {
 	ExprContext
+	op antlr.Token
 }
 
 func NewMulDivBinaryExpressionContext(parser antlr.Parser, ctx antlr.ParserRuleContext) *MulDivBinaryExpressionContext {
@@ -1741,6 +1823,10 @@ func NewMulDivBinaryExpressionContext(parser antlr.Parser, ctx antlr.ParserRuleC
 
 	return p
 }
+
+func (s *MulDivBinaryExpressionContext) GetOp() antlr.Token { return s.op }
+
+func (s *MulDivBinaryExpressionContext) SetOp(v antlr.Token) { s.op = v }
 
 func (s *MulDivBinaryExpressionContext) GetRuleContext() antlr.RuleContext {
 	return s
@@ -1835,7 +1921,7 @@ func (p *MonkeyParser) expr(_p int) (localctx IExprContext) {
 	var _alt int
 
 	p.EnterOuterAlt(localctx, 1)
-	p.SetState(79)
+	p.SetState(83)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
 		goto errorExit
@@ -1898,12 +1984,37 @@ func (p *MonkeyParser) expr(_p int) (localctx IExprContext) {
 			}
 		}
 
+	case MonkeyParserLPAREN:
+		localctx = NewGroupedExpressionContext(p, localctx)
+		p.SetParserRuleContext(localctx)
+		_prevctx = localctx
+		{
+			p.SetState(37)
+			p.Match(MonkeyParserLPAREN)
+			if p.HasError() {
+				// Recognition error - abort rule
+				goto errorExit
+			}
+		}
+		{
+			p.SetState(38)
+			p.expr(0)
+		}
+		{
+			p.SetState(39)
+			p.Match(MonkeyParserRPAREN)
+			if p.HasError() {
+				// Recognition error - abort rule
+				goto errorExit
+			}
+		}
+
 	case MonkeyParserMINUS, MonkeyParserBANG:
 		localctx = NewUnaryOperatorExpressionContext(p, localctx)
 		p.SetParserRuleContext(localctx)
 		_prevctx = localctx
 		{
-			p.SetState(37)
+			p.SetState(41)
 
 			var _lt = p.GetTokenStream().LT(1)
 
@@ -1921,7 +2032,7 @@ func (p *MonkeyParser) expr(_p int) (localctx IExprContext) {
 			}
 		}
 		{
-			p.SetState(38)
+			p.SetState(42)
 			p.expr(10)
 		}
 
@@ -1930,7 +2041,7 @@ func (p *MonkeyParser) expr(_p int) (localctx IExprContext) {
 		p.SetParserRuleContext(localctx)
 		_prevctx = localctx
 		{
-			p.SetState(39)
+			p.SetState(43)
 			p.Match(MonkeyParserLBRACKET)
 			if p.HasError() {
 				// Recognition error - abort rule
@@ -1938,11 +2049,11 @@ func (p *MonkeyParser) expr(_p int) (localctx IExprContext) {
 			}
 		}
 		{
-			p.SetState(40)
+			p.SetState(44)
 			p.Expr_list()
 		}
 		{
-			p.SetState(41)
+			p.SetState(45)
 			p.Match(MonkeyParserRBRACKET)
 			if p.HasError() {
 				// Recognition error - abort rule
@@ -1955,7 +2066,7 @@ func (p *MonkeyParser) expr(_p int) (localctx IExprContext) {
 		p.SetParserRuleContext(localctx)
 		_prevctx = localctx
 		{
-			p.SetState(43)
+			p.SetState(47)
 			p.Match(MonkeyParserIF)
 			if p.HasError() {
 				// Recognition error - abort rule
@@ -1963,7 +2074,7 @@ func (p *MonkeyParser) expr(_p int) (localctx IExprContext) {
 			}
 		}
 		{
-			p.SetState(44)
+			p.SetState(48)
 			p.Match(MonkeyParserLPAREN)
 			if p.HasError() {
 				// Recognition error - abort rule
@@ -1971,11 +2082,11 @@ func (p *MonkeyParser) expr(_p int) (localctx IExprContext) {
 			}
 		}
 		{
-			p.SetState(45)
+			p.SetState(49)
 			p.expr(0)
 		}
 		{
-			p.SetState(46)
+			p.SetState(50)
 			p.Match(MonkeyParserRPAREN)
 			if p.HasError() {
 				// Recognition error - abort rule
@@ -1983,27 +2094,27 @@ func (p *MonkeyParser) expr(_p int) (localctx IExprContext) {
 			}
 		}
 		{
-			p.SetState(47)
+			p.SetState(51)
 			p.Match(MonkeyParserLBRACE)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
 			}
 		}
-		p.SetState(51)
+		p.SetState(55)
 		p.GetErrorHandler().Sync(p)
 		if p.HasError() {
 			goto errorExit
 		}
 		_la = p.GetTokenStream().LA(1)
 
-		for (int64(_la) & ^0x3f) == 0 && ((int64(1)<<_la)&268462014) != 0 {
+		for (int64(_la) & ^0x3f) == 0 && ((int64(1)<<_la)&285239230) != 0 {
 			{
-				p.SetState(48)
+				p.SetState(52)
 				p.Stmt()
 			}
 
-			p.SetState(53)
+			p.SetState(57)
 			p.GetErrorHandler().Sync(p)
 			if p.HasError() {
 				goto errorExit
@@ -2011,19 +2122,19 @@ func (p *MonkeyParser) expr(_p int) (localctx IExprContext) {
 			_la = p.GetTokenStream().LA(1)
 		}
 		{
-			p.SetState(54)
+			p.SetState(58)
 			p.Match(MonkeyParserRBRACE)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
 			}
 		}
-		p.SetState(64)
+		p.SetState(68)
 		p.GetErrorHandler().Sync(p)
 
 		if p.GetInterpreter().AdaptivePredict(p.BaseParser, p.GetTokenStream(), 5, p.GetParserRuleContext()) == 1 {
 			{
-				p.SetState(55)
+				p.SetState(59)
 				p.Match(MonkeyParserELSE)
 				if p.HasError() {
 					// Recognition error - abort rule
@@ -2031,27 +2142,27 @@ func (p *MonkeyParser) expr(_p int) (localctx IExprContext) {
 				}
 			}
 			{
-				p.SetState(56)
+				p.SetState(60)
 				p.Match(MonkeyParserLBRACE)
 				if p.HasError() {
 					// Recognition error - abort rule
 					goto errorExit
 				}
 			}
-			p.SetState(60)
+			p.SetState(64)
 			p.GetErrorHandler().Sync(p)
 			if p.HasError() {
 				goto errorExit
 			}
 			_la = p.GetTokenStream().LA(1)
 
-			for (int64(_la) & ^0x3f) == 0 && ((int64(1)<<_la)&268462014) != 0 {
+			for (int64(_la) & ^0x3f) == 0 && ((int64(1)<<_la)&285239230) != 0 {
 				{
-					p.SetState(57)
+					p.SetState(61)
 					p.Stmt()
 				}
 
-				p.SetState(62)
+				p.SetState(66)
 				p.GetErrorHandler().Sync(p)
 				if p.HasError() {
 					goto errorExit
@@ -2059,7 +2170,7 @@ func (p *MonkeyParser) expr(_p int) (localctx IExprContext) {
 				_la = p.GetTokenStream().LA(1)
 			}
 			{
-				p.SetState(63)
+				p.SetState(67)
 				p.Match(MonkeyParserRBRACE)
 				if p.HasError() {
 					// Recognition error - abort rule
@@ -2076,7 +2187,7 @@ func (p *MonkeyParser) expr(_p int) (localctx IExprContext) {
 		p.SetParserRuleContext(localctx)
 		_prevctx = localctx
 		{
-			p.SetState(66)
+			p.SetState(70)
 			p.Match(MonkeyParserFUNCTION)
 			if p.HasError() {
 				// Recognition error - abort rule
@@ -2084,7 +2195,7 @@ func (p *MonkeyParser) expr(_p int) (localctx IExprContext) {
 			}
 		}
 		{
-			p.SetState(67)
+			p.SetState(71)
 			p.Match(MonkeyParserLPAREN)
 			if p.HasError() {
 				// Recognition error - abort rule
@@ -2092,11 +2203,11 @@ func (p *MonkeyParser) expr(_p int) (localctx IExprContext) {
 			}
 		}
 		{
-			p.SetState(68)
+			p.SetState(72)
 			p.Args_list()
 		}
 		{
-			p.SetState(69)
+			p.SetState(73)
 			p.Match(MonkeyParserRPAREN)
 			if p.HasError() {
 				// Recognition error - abort rule
@@ -2104,27 +2215,27 @@ func (p *MonkeyParser) expr(_p int) (localctx IExprContext) {
 			}
 		}
 		{
-			p.SetState(70)
+			p.SetState(74)
 			p.Match(MonkeyParserLBRACE)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
 			}
 		}
-		p.SetState(74)
+		p.SetState(78)
 		p.GetErrorHandler().Sync(p)
 		if p.HasError() {
 			goto errorExit
 		}
 		_la = p.GetTokenStream().LA(1)
 
-		for (int64(_la) & ^0x3f) == 0 && ((int64(1)<<_la)&268462014) != 0 {
+		for (int64(_la) & ^0x3f) == 0 && ((int64(1)<<_la)&285239230) != 0 {
 			{
-				p.SetState(71)
+				p.SetState(75)
 				p.Stmt()
 			}
 
-			p.SetState(76)
+			p.SetState(80)
 			p.GetErrorHandler().Sync(p)
 			if p.HasError() {
 				goto errorExit
@@ -2132,7 +2243,7 @@ func (p *MonkeyParser) expr(_p int) (localctx IExprContext) {
 			_la = p.GetTokenStream().LA(1)
 		}
 		{
-			p.SetState(77)
+			p.SetState(81)
 			p.Match(MonkeyParserRBRACE)
 			if p.HasError() {
 				// Recognition error - abort rule
@@ -2145,7 +2256,7 @@ func (p *MonkeyParser) expr(_p int) (localctx IExprContext) {
 		goto errorExit
 	}
 	p.GetParserRuleContext().SetStop(p.GetTokenStream().LT(-1))
-	p.SetState(105)
+	p.SetState(109)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
 		goto errorExit
@@ -2160,7 +2271,7 @@ func (p *MonkeyParser) expr(_p int) (localctx IExprContext) {
 				p.TriggerExitRuleEvent()
 			}
 			_prevctx = localctx
-			p.SetState(103)
+			p.SetState(107)
 			p.GetErrorHandler().Sync(p)
 			if p.HasError() {
 				goto errorExit
@@ -2170,114 +2281,142 @@ func (p *MonkeyParser) expr(_p int) (localctx IExprContext) {
 			case 1:
 				localctx = NewMulDivBinaryExpressionContext(p, NewExprContext(p, _parentctx, _parentState))
 				p.PushNewRecursionContext(localctx, _startState, MonkeyParserRULE_expr)
-				p.SetState(81)
+				p.SetState(85)
 
 				if !(p.Precpred(p.GetParserRuleContext(), 7)) {
 					p.SetError(antlr.NewFailedPredicateException(p, "p.Precpred(p.GetParserRuleContext(), 7)", ""))
 					goto errorExit
 				}
 				{
-					p.SetState(82)
+					p.SetState(86)
+
+					var _lt = p.GetTokenStream().LT(1)
+
+					localctx.(*MulDivBinaryExpressionContext).op = _lt
+
 					_la = p.GetTokenStream().LA(1)
 
 					if !(_la == MonkeyParserASTERISK || _la == MonkeyParserSLASH) {
-						p.GetErrorHandler().RecoverInline(p)
+						var _ri = p.GetErrorHandler().RecoverInline(p)
+
+						localctx.(*MulDivBinaryExpressionContext).op = _ri
 					} else {
 						p.GetErrorHandler().ReportMatch(p)
 						p.Consume()
 					}
 				}
 				{
-					p.SetState(83)
+					p.SetState(87)
 					p.expr(8)
 				}
 
 			case 2:
 				localctx = NewAddSubBinaryExpressionContext(p, NewExprContext(p, _parentctx, _parentState))
 				p.PushNewRecursionContext(localctx, _startState, MonkeyParserRULE_expr)
-				p.SetState(84)
+				p.SetState(88)
 
 				if !(p.Precpred(p.GetParserRuleContext(), 6)) {
 					p.SetError(antlr.NewFailedPredicateException(p, "p.Precpred(p.GetParserRuleContext(), 6)", ""))
 					goto errorExit
 				}
 				{
-					p.SetState(85)
+					p.SetState(89)
+
+					var _lt = p.GetTokenStream().LT(1)
+
+					localctx.(*AddSubBinaryExpressionContext).op = _lt
+
 					_la = p.GetTokenStream().LA(1)
 
 					if !(_la == MonkeyParserPLUS || _la == MonkeyParserMINUS) {
-						p.GetErrorHandler().RecoverInline(p)
+						var _ri = p.GetErrorHandler().RecoverInline(p)
+
+						localctx.(*AddSubBinaryExpressionContext).op = _ri
 					} else {
 						p.GetErrorHandler().ReportMatch(p)
 						p.Consume()
 					}
 				}
 				{
-					p.SetState(86)
+					p.SetState(90)
 					p.expr(7)
 				}
 
 			case 3:
 				localctx = NewLesGreBinaryExpressionContext(p, NewExprContext(p, _parentctx, _parentState))
 				p.PushNewRecursionContext(localctx, _startState, MonkeyParserRULE_expr)
-				p.SetState(87)
+				p.SetState(91)
 
 				if !(p.Precpred(p.GetParserRuleContext(), 5)) {
 					p.SetError(antlr.NewFailedPredicateException(p, "p.Precpred(p.GetParserRuleContext(), 5)", ""))
 					goto errorExit
 				}
 				{
-					p.SetState(88)
+					p.SetState(92)
+
+					var _lt = p.GetTokenStream().LT(1)
+
+					localctx.(*LesGreBinaryExpressionContext).op = _lt
+
 					_la = p.GetTokenStream().LA(1)
 
 					if !(_la == MonkeyParserLT || _la == MonkeyParserGT) {
-						p.GetErrorHandler().RecoverInline(p)
+						var _ri = p.GetErrorHandler().RecoverInline(p)
+
+						localctx.(*LesGreBinaryExpressionContext).op = _ri
 					} else {
 						p.GetErrorHandler().ReportMatch(p)
 						p.Consume()
 					}
 				}
 				{
-					p.SetState(89)
+					p.SetState(93)
 					p.expr(6)
 				}
 
 			case 4:
 				localctx = NewEqualityBinaryExpressionContext(p, NewExprContext(p, _parentctx, _parentState))
 				p.PushNewRecursionContext(localctx, _startState, MonkeyParserRULE_expr)
-				p.SetState(90)
+				p.SetState(94)
 
 				if !(p.Precpred(p.GetParserRuleContext(), 4)) {
 					p.SetError(antlr.NewFailedPredicateException(p, "p.Precpred(p.GetParserRuleContext(), 4)", ""))
 					goto errorExit
 				}
 				{
-					p.SetState(91)
+					p.SetState(95)
+
+					var _lt = p.GetTokenStream().LT(1)
+
+					localctx.(*EqualityBinaryExpressionContext).op = _lt
+
 					_la = p.GetTokenStream().LA(1)
 
 					if !(_la == MonkeyParserEQ || _la == MonkeyParserNOT_EQ) {
-						p.GetErrorHandler().RecoverInline(p)
+						var _ri = p.GetErrorHandler().RecoverInline(p)
+
+						localctx.(*EqualityBinaryExpressionContext).op = _ri
 					} else {
 						p.GetErrorHandler().ReportMatch(p)
 						p.Consume()
 					}
 				}
 				{
-					p.SetState(92)
+					p.SetState(96)
 					p.expr(5)
 				}
 
 			case 5:
 				localctx = NewIndexOperatorExpressionContext(p, NewExprContext(p, _parentctx, _parentState))
 				p.PushNewRecursionContext(localctx, _startState, MonkeyParserRULE_expr)
-				p.SetState(93)
+				p.SetState(97)
 
 				if !(p.Precpred(p.GetParserRuleContext(), 9)) {
 					p.SetError(antlr.NewFailedPredicateException(p, "p.Precpred(p.GetParserRuleContext(), 9)", ""))
 					goto errorExit
 				}
 				{
-					p.SetState(94)
+					p.SetState(98)
 					p.Match(MonkeyParserLBRACKET)
 					if p.HasError() {
 						// Recognition error - abort rule
@@ -2285,11 +2424,11 @@ func (p *MonkeyParser) expr(_p int) (localctx IExprContext) {
 					}
 				}
 				{
-					p.SetState(95)
+					p.SetState(99)
 					p.expr(0)
 				}
 				{
-					p.SetState(96)
+					p.SetState(100)
 					p.Match(MonkeyParserRBRACKET)
 					if p.HasError() {
 						// Recognition error - abort rule
@@ -2300,14 +2439,14 @@ func (p *MonkeyParser) expr(_p int) (localctx IExprContext) {
 			case 6:
 				localctx = NewCallExpressionContext(p, NewExprContext(p, _parentctx, _parentState))
 				p.PushNewRecursionContext(localctx, _startState, MonkeyParserRULE_expr)
-				p.SetState(98)
+				p.SetState(102)
 
 				if !(p.Precpred(p.GetParserRuleContext(), 8)) {
 					p.SetError(antlr.NewFailedPredicateException(p, "p.Precpred(p.GetParserRuleContext(), 8)", ""))
 					goto errorExit
 				}
 				{
-					p.SetState(99)
+					p.SetState(103)
 					p.Match(MonkeyParserLPAREN)
 					if p.HasError() {
 						// Recognition error - abort rule
@@ -2315,11 +2454,11 @@ func (p *MonkeyParser) expr(_p int) (localctx IExprContext) {
 					}
 				}
 				{
-					p.SetState(100)
+					p.SetState(104)
 					p.Expr_list()
 				}
 				{
-					p.SetState(101)
+					p.SetState(105)
 					p.Match(MonkeyParserRPAREN)
 					if p.HasError() {
 						// Recognition error - abort rule
@@ -2332,7 +2471,7 @@ func (p *MonkeyParser) expr(_p int) (localctx IExprContext) {
 			}
 
 		}
-		p.SetState(107)
+		p.SetState(111)
 		p.GetErrorHandler().Sync(p)
 		if p.HasError() {
 			goto errorExit
@@ -2473,7 +2612,7 @@ func (p *MonkeyParser) Let_stmt() (localctx ILet_stmtContext) {
 	p.EnterRule(localctx, 6, MonkeyParserRULE_let_stmt)
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(108)
+		p.SetState(112)
 		p.Match(MonkeyParserLET)
 		if p.HasError() {
 			// Recognition error - abort rule
@@ -2481,7 +2620,7 @@ func (p *MonkeyParser) Let_stmt() (localctx ILet_stmtContext) {
 		}
 	}
 	{
-		p.SetState(109)
+		p.SetState(113)
 		p.Match(MonkeyParserIDENT)
 		if p.HasError() {
 			// Recognition error - abort rule
@@ -2489,7 +2628,7 @@ func (p *MonkeyParser) Let_stmt() (localctx ILet_stmtContext) {
 		}
 	}
 	{
-		p.SetState(110)
+		p.SetState(114)
 		p.Match(MonkeyParserASSIGN)
 		if p.HasError() {
 			// Recognition error - abort rule
@@ -2497,11 +2636,11 @@ func (p *MonkeyParser) Let_stmt() (localctx ILet_stmtContext) {
 		}
 	}
 	{
-		p.SetState(111)
+		p.SetState(115)
 		p.expr(0)
 	}
 	{
-		p.SetState(112)
+		p.SetState(116)
 		p.Match(MonkeyParserSEMICOLON)
 		if p.HasError() {
 			// Recognition error - abort rule
@@ -2629,7 +2768,7 @@ func (p *MonkeyParser) Return_stmt() (localctx IReturn_stmtContext) {
 	p.EnterRule(localctx, 8, MonkeyParserRULE_return_stmt)
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(114)
+		p.SetState(118)
 		p.Match(MonkeyParserRETURN)
 		if p.HasError() {
 			// Recognition error - abort rule
@@ -2637,11 +2776,11 @@ func (p *MonkeyParser) Return_stmt() (localctx IReturn_stmtContext) {
 		}
 	}
 	{
-		p.SetState(115)
+		p.SetState(119)
 		p.expr(0)
 	}
 	{
-		p.SetState(116)
+		p.SetState(120)
 		p.Match(MonkeyParserSEMICOLON)
 		if p.HasError() {
 			// Recognition error - abort rule
@@ -2764,11 +2903,11 @@ func (p *MonkeyParser) Expression_stmt() (localctx IExpression_stmtContext) {
 	p.EnterRule(localctx, 10, MonkeyParserRULE_expression_stmt)
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(118)
+		p.SetState(122)
 		p.expr(0)
 	}
 	{
-		p.SetState(119)
+		p.SetState(123)
 		p.Match(MonkeyParserSEMICOLON)
 		if p.HasError() {
 			// Recognition error - abort rule
@@ -2922,7 +3061,7 @@ func (p *MonkeyParser) Expr_list() (localctx IExpr_listContext) {
 	p.EnterRule(localctx, 12, MonkeyParserRULE_expr_list)
 	var _la int
 
-	p.SetState(130)
+	p.SetState(134)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
 		goto errorExit
@@ -2932,13 +3071,13 @@ func (p *MonkeyParser) Expr_list() (localctx IExpr_listContext) {
 	case MonkeyParserRPAREN, MonkeyParserRBRACKET:
 		p.EnterOuterAlt(localctx, 1)
 
-	case MonkeyParserFUNCTION, MonkeyParserTRUE, MonkeyParserFALSE, MonkeyParserIF, MonkeyParserSTRING, MonkeyParserIDENT, MonkeyParserINT, MonkeyParserMINUS, MonkeyParserBANG, MonkeyParserLBRACKET:
+	case MonkeyParserFUNCTION, MonkeyParserTRUE, MonkeyParserFALSE, MonkeyParserIF, MonkeyParserSTRING, MonkeyParserIDENT, MonkeyParserINT, MonkeyParserMINUS, MonkeyParserBANG, MonkeyParserLPAREN, MonkeyParserLBRACKET:
 		p.EnterOuterAlt(localctx, 2)
 		{
-			p.SetState(122)
+			p.SetState(126)
 			p.expr(0)
 		}
-		p.SetState(127)
+		p.SetState(131)
 		p.GetErrorHandler().Sync(p)
 		if p.HasError() {
 			goto errorExit
@@ -2947,7 +3086,7 @@ func (p *MonkeyParser) Expr_list() (localctx IExpr_listContext) {
 
 		for _la == MonkeyParserCOMMA {
 			{
-				p.SetState(123)
+				p.SetState(127)
 				p.Match(MonkeyParserCOMMA)
 				if p.HasError() {
 					// Recognition error - abort rule
@@ -2955,11 +3094,11 @@ func (p *MonkeyParser) Expr_list() (localctx IExpr_listContext) {
 				}
 			}
 			{
-				p.SetState(124)
+				p.SetState(128)
 				p.expr(0)
 			}
 
-			p.SetState(129)
+			p.SetState(133)
 			p.GetErrorHandler().Sync(p)
 			if p.HasError() {
 				goto errorExit
@@ -3085,7 +3224,7 @@ func (p *MonkeyParser) Args_list() (localctx IArgs_listContext) {
 	p.EnterRule(localctx, 14, MonkeyParserRULE_args_list)
 	var _la int
 
-	p.SetState(141)
+	p.SetState(145)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
 		goto errorExit
@@ -3098,14 +3237,14 @@ func (p *MonkeyParser) Args_list() (localctx IArgs_listContext) {
 	case MonkeyParserIDENT:
 		p.EnterOuterAlt(localctx, 2)
 		{
-			p.SetState(133)
+			p.SetState(137)
 			p.Match(MonkeyParserIDENT)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
 			}
 		}
-		p.SetState(138)
+		p.SetState(142)
 		p.GetErrorHandler().Sync(p)
 		if p.HasError() {
 			goto errorExit
@@ -3114,7 +3253,7 @@ func (p *MonkeyParser) Args_list() (localctx IArgs_listContext) {
 
 		for _la == MonkeyParserCOMMA {
 			{
-				p.SetState(134)
+				p.SetState(138)
 				p.Match(MonkeyParserCOMMA)
 				if p.HasError() {
 					// Recognition error - abort rule
@@ -3122,7 +3261,7 @@ func (p *MonkeyParser) Args_list() (localctx IArgs_listContext) {
 				}
 			}
 			{
-				p.SetState(135)
+				p.SetState(139)
 				p.Match(MonkeyParserIDENT)
 				if p.HasError() {
 					// Recognition error - abort rule
@@ -3130,7 +3269,7 @@ func (p *MonkeyParser) Args_list() (localctx IArgs_listContext) {
 				}
 			}
 
-			p.SetState(140)
+			p.SetState(144)
 			p.GetErrorHandler().Sync(p)
 			if p.HasError() {
 				goto errorExit
