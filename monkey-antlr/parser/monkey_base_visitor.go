@@ -11,11 +11,71 @@ func (v *BaseMonkeyVisitor) VisitProg(ctx *ProgContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseMonkeyVisitor) VisitStmt(ctx *StmtContext) interface{} {
+func (v *BaseMonkeyVisitor) VisitLetStatement(ctx *LetStatementContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseMonkeyVisitor) VisitExpr(ctx *ExprContext) interface{} {
+func (v *BaseMonkeyVisitor) VisitReturnStatement(ctx *ReturnStatementContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseMonkeyVisitor) VisitExpressionStatement(ctx *ExpressionStatementContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseMonkeyVisitor) VisitIfExpression(ctx *IfExpressionContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseMonkeyVisitor) VisitUnaryOperatorExpression(ctx *UnaryOperatorExpressionContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseMonkeyVisitor) VisitBooleanLiteral(ctx *BooleanLiteralContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseMonkeyVisitor) VisitEqualityBinaryExpression(ctx *EqualityBinaryExpressionContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseMonkeyVisitor) VisitIdentifierExpression(ctx *IdentifierExpressionContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseMonkeyVisitor) VisitLesGreBinaryExpression(ctx *LesGreBinaryExpressionContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseMonkeyVisitor) VisitIndexOperatorExpression(ctx *IndexOperatorExpressionContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseMonkeyVisitor) VisitAddSubBinaryExpression(ctx *AddSubBinaryExpressionContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseMonkeyVisitor) VisitFunctionExpression(ctx *FunctionExpressionContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseMonkeyVisitor) VisitStringLiteral(ctx *StringLiteralContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseMonkeyVisitor) VisitArrayExpression(ctx *ArrayExpressionContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseMonkeyVisitor) VisitCallExpression(ctx *CallExpressionContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseMonkeyVisitor) VisitIntegerLiteral(ctx *IntegerLiteralContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseMonkeyVisitor) VisitMulDivBinaryExpression(ctx *MulDivBinaryExpressionContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 

@@ -2,26 +2,27 @@ grammar Monkey;
 
 // -- Parser ---------------------------------------
 
-prog : stmt+ EOF ;
-stmt : let_stmt
-     | return_stmt
-     | expression_stmt
+prog : stmt* expr? EOF ;
+
+stmt : let_stmt        # LetStatement
+     | return_stmt     # ReturnStatement
+     | expression_stmt # ExpressionStatement
      ;
-expr : INT
-     | TRUE
-     | FALSE
-     | STRING
-     | IDENT
-     | (MINUS | BANG) expr
-     | expr LBRACKET expr RBRACKET
-     | expr LPAREN expr_list RPAREN
-     | expr (ASTERISK | SLASH) expr
-     | expr (PLUS | MINUS) expr
-     | expr (LT | GT) expr
-     | expr (EQ | NOT_EQ) expr
-     | LBRACKET expr_list RBRACKET
-     | IF LPAREN expr RPAREN LBRACE stmt* RBRACE (ELSE LBRACE stmt* RBRACE)?
-     | FUNCTION LPAREN args_list RPAREN LBRACE stmt* RBRACE
+
+expr : INT                                                                   # IntegerLiteral
+     | (TRUE | FALSE)                                                        # BooleanLiteral
+     | STRING                                                                # StringLiteral
+     | IDENT                                                                 # IdentifierExpression
+     | (MINUS | BANG) expr                                                   # UnaryOperatorExpression
+     | expr LBRACKET expr RBRACKET                                           # IndexOperatorExpression
+     | expr LPAREN expr_list RPAREN                                          # CallExpression
+     | expr (ASTERISK | SLASH) expr                                          # MulDivBinaryExpression
+     | expr (PLUS | MINUS) expr                                              # AddSubBinaryExpression
+     | expr (LT | GT) expr                                                   # LesGreBinaryExpression
+     | expr (EQ | NOT_EQ) expr                                               # EqualityBinaryExpression
+     | LBRACKET expr_list RBRACKET                                           # ArrayExpression
+     | IF LPAREN expr RPAREN LBRACE stmt* RBRACE (ELSE LBRACE stmt* RBRACE)? # IfExpression
+     | FUNCTION LPAREN args_list RPAREN LBRACE stmt* RBRACE                  # FunctionExpression
      ;
 
 // Statements

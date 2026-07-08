@@ -10,11 +10,56 @@ type MonkeyListener interface {
 	// EnterProg is called when entering the prog production.
 	EnterProg(c *ProgContext)
 
-	// EnterStmt is called when entering the stmt production.
-	EnterStmt(c *StmtContext)
+	// EnterLetStatement is called when entering the LetStatement production.
+	EnterLetStatement(c *LetStatementContext)
 
-	// EnterExpr is called when entering the expr production.
-	EnterExpr(c *ExprContext)
+	// EnterReturnStatement is called when entering the ReturnStatement production.
+	EnterReturnStatement(c *ReturnStatementContext)
+
+	// EnterExpressionStatement is called when entering the ExpressionStatement production.
+	EnterExpressionStatement(c *ExpressionStatementContext)
+
+	// EnterIfExpression is called when entering the IfExpression production.
+	EnterIfExpression(c *IfExpressionContext)
+
+	// EnterUnaryOperatorExpression is called when entering the UnaryOperatorExpression production.
+	EnterUnaryOperatorExpression(c *UnaryOperatorExpressionContext)
+
+	// EnterBooleanLiteral is called when entering the BooleanLiteral production.
+	EnterBooleanLiteral(c *BooleanLiteralContext)
+
+	// EnterEqualityBinaryExpression is called when entering the EqualityBinaryExpression production.
+	EnterEqualityBinaryExpression(c *EqualityBinaryExpressionContext)
+
+	// EnterIdentifierExpression is called when entering the IdentifierExpression production.
+	EnterIdentifierExpression(c *IdentifierExpressionContext)
+
+	// EnterLesGreBinaryExpression is called when entering the LesGreBinaryExpression production.
+	EnterLesGreBinaryExpression(c *LesGreBinaryExpressionContext)
+
+	// EnterIndexOperatorExpression is called when entering the IndexOperatorExpression production.
+	EnterIndexOperatorExpression(c *IndexOperatorExpressionContext)
+
+	// EnterAddSubBinaryExpression is called when entering the AddSubBinaryExpression production.
+	EnterAddSubBinaryExpression(c *AddSubBinaryExpressionContext)
+
+	// EnterFunctionExpression is called when entering the FunctionExpression production.
+	EnterFunctionExpression(c *FunctionExpressionContext)
+
+	// EnterStringLiteral is called when entering the StringLiteral production.
+	EnterStringLiteral(c *StringLiteralContext)
+
+	// EnterArrayExpression is called when entering the ArrayExpression production.
+	EnterArrayExpression(c *ArrayExpressionContext)
+
+	// EnterCallExpression is called when entering the CallExpression production.
+	EnterCallExpression(c *CallExpressionContext)
+
+	// EnterIntegerLiteral is called when entering the IntegerLiteral production.
+	EnterIntegerLiteral(c *IntegerLiteralContext)
+
+	// EnterMulDivBinaryExpression is called when entering the MulDivBinaryExpression production.
+	EnterMulDivBinaryExpression(c *MulDivBinaryExpressionContext)
 
 	// EnterLet_stmt is called when entering the let_stmt production.
 	EnterLet_stmt(c *Let_stmtContext)
@@ -34,11 +79,56 @@ type MonkeyListener interface {
 	// ExitProg is called when exiting the prog production.
 	ExitProg(c *ProgContext)
 
-	// ExitStmt is called when exiting the stmt production.
-	ExitStmt(c *StmtContext)
+	// ExitLetStatement is called when exiting the LetStatement production.
+	ExitLetStatement(c *LetStatementContext)
 
-	// ExitExpr is called when exiting the expr production.
-	ExitExpr(c *ExprContext)
+	// ExitReturnStatement is called when exiting the ReturnStatement production.
+	ExitReturnStatement(c *ReturnStatementContext)
+
+	// ExitExpressionStatement is called when exiting the ExpressionStatement production.
+	ExitExpressionStatement(c *ExpressionStatementContext)
+
+	// ExitIfExpression is called when exiting the IfExpression production.
+	ExitIfExpression(c *IfExpressionContext)
+
+	// ExitUnaryOperatorExpression is called when exiting the UnaryOperatorExpression production.
+	ExitUnaryOperatorExpression(c *UnaryOperatorExpressionContext)
+
+	// ExitBooleanLiteral is called when exiting the BooleanLiteral production.
+	ExitBooleanLiteral(c *BooleanLiteralContext)
+
+	// ExitEqualityBinaryExpression is called when exiting the EqualityBinaryExpression production.
+	ExitEqualityBinaryExpression(c *EqualityBinaryExpressionContext)
+
+	// ExitIdentifierExpression is called when exiting the IdentifierExpression production.
+	ExitIdentifierExpression(c *IdentifierExpressionContext)
+
+	// ExitLesGreBinaryExpression is called when exiting the LesGreBinaryExpression production.
+	ExitLesGreBinaryExpression(c *LesGreBinaryExpressionContext)
+
+	// ExitIndexOperatorExpression is called when exiting the IndexOperatorExpression production.
+	ExitIndexOperatorExpression(c *IndexOperatorExpressionContext)
+
+	// ExitAddSubBinaryExpression is called when exiting the AddSubBinaryExpression production.
+	ExitAddSubBinaryExpression(c *AddSubBinaryExpressionContext)
+
+	// ExitFunctionExpression is called when exiting the FunctionExpression production.
+	ExitFunctionExpression(c *FunctionExpressionContext)
+
+	// ExitStringLiteral is called when exiting the StringLiteral production.
+	ExitStringLiteral(c *StringLiteralContext)
+
+	// ExitArrayExpression is called when exiting the ArrayExpression production.
+	ExitArrayExpression(c *ArrayExpressionContext)
+
+	// ExitCallExpression is called when exiting the CallExpression production.
+	ExitCallExpression(c *CallExpressionContext)
+
+	// ExitIntegerLiteral is called when exiting the IntegerLiteral production.
+	ExitIntegerLiteral(c *IntegerLiteralContext)
+
+	// ExitMulDivBinaryExpression is called when exiting the MulDivBinaryExpression production.
+	ExitMulDivBinaryExpression(c *MulDivBinaryExpressionContext)
 
 	// ExitLet_stmt is called when exiting the let_stmt production.
 	ExitLet_stmt(c *Let_stmtContext)
